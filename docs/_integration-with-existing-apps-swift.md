@@ -143,7 +143,7 @@ Sending stats
 Pod installation complete! There are 3 dependencies from the Podfile and 1 total pod installed.
 ```
 
-> If this fails with errors mentioning `xcrun`, make sure that in Xcode in **Settings... (or Preferences...) > Locations** the Command Line Tools are assigned.
+> If this fails with errors mentioning `xcrun`, make sure that in Xcode in **Settings... (or Preferences...) &gt; Locations** the Command Line Tools are assigned.
 
 > If you get a warning such as "_The `swift-2048 [Debug]` target overrides the `FRAMEWORK_SEARCH_PATHS` build setting defined in `Pods/Target Support Files/Pods-swift-2048/Pods-swift-2048.debug.xcconfig`. This can lead to problems with the CocoaPods installation_", then make sure the `Framework Search Paths` in `Build Settings` for both `Debug` and `Release` only contain `$(inherited)`.
 
@@ -227,7 +227,7 @@ You can add a new link on the main game menu to go to the "High Score" React Nat
 
 We will now add an event handler from the menu link. A method will be added to the main `ViewController` of your application. This is where `RCTRootView` comes into play.
 
-When you build a React Native application, you use the [Metro bundler][metro] to create an `index.bundle` that will be served by the React Native server. Inside `index.bundle` will be our `RNHighScore` module. So, we need to point our `RCTRootView` to the location of the `index.bundle` resource (via `NSURL`) and tie it to the module.
+When you build a React Native application, you use the  to create an `index.bundle` that will be served by the React Native server. Inside `index.bundle` will be our `RNHighScore` module. So, we need to point our `RCTRootView` to the location of the `index.bundle` resource (via `NSURL`) and tie it to the module.
 
 We will, for debugging purposes, log that the event handler was invoked. Then, we will create a string with the location of our React Native code that exists inside the `index.bundle`. Finally, we will create the main `RCTRootView`. Notice how we provide `RNHighScores` as the `moduleName` that we created [above](#the-react-native-component) when writing the code for our React Native component.
 
@@ -298,7 +298,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Test your integration
 
-You have now done all the basic steps to integrate React Native with your current application. Now we will start the [Metro bundler][metro] to build the `index.bundle` package and the server running on `localhost` to serve it.
+You have now done all the basic steps to integrate React Native with your current application. Now we will start the  to build the `index.bundle` package and the server running on `localhost` to serve it.
 
 ##### 1. Add App Transport Security exception
 
@@ -377,5 +377,3 @@ Here is the _React Native_ high score screen:
 ### Now what?
 
 At this point you can continue developing your app as usual. Refer to our [debugging](debugging) and [deployment](running-on-device) docs to learn more about working with React Native.
-
-[metro]: https://metrobundler.dev/
